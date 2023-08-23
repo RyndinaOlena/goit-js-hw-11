@@ -10,16 +10,19 @@
 </head>
 
 <body>
+  <header>
+    <form class="search-form" id="search-form">
+      <input type="text" name="searchQuery" class="query" autocomplete="off" placeholder="Search images..." />
+      <button type="submit">Search</button>
+    </form>
+  </header>
 
-  <form class="search-form" id="search-form">
-    <input type="text" name="searchQuery" class="query" autocomplete="off" placeholder="Search images..." />
-    <button type="submit">Search</button>
-  </form>
+
 
   <div class="gallery">
     <!-- Картки зображень -->
   </div>
-  <button type="button" class="load-more">Load more</button>
+  <button type="button" class="load-more is-hidden">Load more</button>
 
   <script type="module" src="./index.js"></script>
 

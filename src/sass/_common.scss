@@ -1,1 +1,36 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.load-more {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.load-more.is-hidden {
+    display: none;
+}
+
+header {
+    background-color: olive;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+.gallery {
+    max-width: 1200px;
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: 200px;
+    display: block;
+
+}

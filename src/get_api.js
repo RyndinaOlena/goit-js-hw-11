@@ -2,8 +2,7 @@ import axios from "axios";
 export { fetchAnimal }
 
 
-const API_URL = 'https://pixabay.com/api/'
-
+axios.defaults.baseURL = 'https://pixabay.com/api/'
 
 axios.defaults.params = {
     page: 1,
@@ -13,13 +12,14 @@ axios.defaults.params = {
     safesearch: true,
     per_page: 40,
 
+
 }
 
 
 
-async function fetchAnimal(query, page, limit) {
+async function fetchAnimal(query, page) {
     axios.defaults.params.q = query
-    return await axios.get(API_URL).then((responce) => {
-        return responce.data
-    })
+    axios.defaults.params.page = page
+    const { data } = await axios.get('')
+    return data
 }
